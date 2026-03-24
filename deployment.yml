@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: shaikmustafa/mytetrisgame:v2
+          image: httpd
           ports:
             - containerPort: 80
