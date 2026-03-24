@@ -1,12 +1,12 @@
 ---
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: nginx-statefulset
   namespace: uday
 spec:
   serviceName: "nginx"
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: nginx
