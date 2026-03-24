@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: flm
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: swiggy
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: comt-1
-          image: shaikmustafa/cycle
+          image: nginx
           ports:
           - containerPort: 3000
