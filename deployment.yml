@@ -1,20 +1,22 @@
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
-  name: flm
+  name: nginx-statefulset
+  namespace: uday
 spec:
+  serviceName: "nginx"
   replicas: 3
   selector:
     matchLabels:
-      app: swiggy
+      app: nginx
   template:
     metadata:
       labels:
-        app: swiggy
+        app: nginx
     spec:
       containers:
-        - name: comt-1
+        - name: nginx-container
           image: nginx
           ports:
-          - containerPort: 3000
+            - containerPort: 80
